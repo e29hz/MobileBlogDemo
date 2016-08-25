@@ -11,7 +11,8 @@
 @interface MTUETableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *iconImage;
-@property (strong, nonatomic)  UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UIView *customBackgroundView;
+
 
 @property (nonatomic, assign) BOOL isBackward;
 

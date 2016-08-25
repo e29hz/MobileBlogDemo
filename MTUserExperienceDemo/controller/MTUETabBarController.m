@@ -21,7 +21,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
     [self addAllChildViewControllers];
 }
 
@@ -39,7 +38,7 @@
     [self addOneChildVc:profile title:@"PROFILE" imageName:@"tabbar_profile" selectedImageName:@""];
 }
 
-+(void)initialize {
++ (void)initialize {
     [[UITabBar appearance] setTintColor:[UIColor blackColor]];
 }
 
@@ -47,7 +46,7 @@
                 title:(NSString *)title
             imageName:(NSString *)imageName
     selectedImageName:(NSString *)selectedImageName {
-    childVc.view.backgroundColor = MTRandomColor;
+//    childVc.view.backgroundColor = MTRandomColor;
     childVc.title = title;
     childVc.tabBarItem.image = [UIImage imageNamed:imageName];
     UIImage *selectedImage = [UIImage imageNamed:selectedImageName];

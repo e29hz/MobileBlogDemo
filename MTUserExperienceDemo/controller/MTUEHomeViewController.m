@@ -9,24 +9,25 @@
 #import "MTUEHomeViewController.h"
 #import "UIColor+MTUserExperience.h"
 #import "MTUETableViewCell.h"
+#import "MTUEDetailViewController.h"
+#import "MTUEDismissTransitionAnimated.h"
+#import "MTUEPresentTransitionAnimated.h"
 
 @interface MTUEHomeViewController ()
 <
 UITableViewDelegate,
-UITableViewDataSource
+UITableViewDataSource,
+UIViewControllerTransitioningDelegate
 >
 
-@property (nonatomic, assign) CGFloat         currentSelection;
-@property (nonatomic, strong) NSArray         *imageNameArray;
-@property (nonatomic, strong) UILabel         *textLabel;
-@property (nonatomic, strong) NSArray         *colorsArray;
-@property (nonatomic, strong) NSArray         *namesArray;
-@property (nonatomic, strong) UITableView     *tableView;
-@property (nonatomic, assign, readwrite) BOOL isBackward;
-@property (nonatomic, strong) NSIndexPath     *currentSelectIndexPath;
-@property (nonatomic, assign, readwrite) BOOL backWard;
-
-
+@property (nonatomic, assign) CGFloat       currentSelection;
+@property (nonatomic, strong) NSArray       *imageNameArray;
+@property (nonatomic, strong) NSArray       *colorsArray;
+@property (nonatomic, strong) NSArray       *namesArray;
+@property (nonatomic, strong) UITableView   *tableView;
+@property (nonatomic, strong) NSIndexPath   *currentSelectIndexPath;
+@property (nonatomic, strong) UIColor       *currentColor;
+@property (nonatomic, assign) BOOL          backward;
 
 @end
 
@@ -34,8 +35,8 @@ UITableViewDataSource
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.backWard = NO;
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.backward = NO;
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.tableView = [[UITableView alloc] initWithFrame:[UIScreen mainScreen].bounds
                                                   style:UITableViewStylePlain];
@@ -44,19 +45,19 @@ UITableViewDataSource
     self.tableView.showsVerticalScrollIndicator = NO;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    self.tableView.contentInset = UIEdgeInsetsMake(44, 0, 0, 0);
     [self.view addSubview:self.tableView];
     self.imageNameArray = @[@"social-dribbble-outline", @"social-github", @"social-dropbox", @"social-instagram", @"ios7-cloudy"];
     self.colorsArray = @[[UIColor DribbbleColor], [UIColor GithubColor], [UIColor DropboxColor], [UIColor InstagramColor], [UIColor CloudyColor]];
     self.namesArray = @[@"Dribbble", @"GitHub", @"Dropbox", @"Instagram", @"Cloudy"];
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     self.currentSelection = -1;
-
     NSIndexPath *selection = [self.tableView indexPathForSelectedRow];
+    self.tableView.contentInset = UIEdgeInsetsMake(44, 0, 44, 0);
+    [self performSelector:@selector(animationBackToOrigin) withObject:nil afterDelay:0.0f];
+
     if (selection) {
         [self.tableView deselectRowAtIndexPath:selection animated:YES];
     }
@@ -64,7 +65,10 @@ UITableViewDataSource
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    [self performSelector:@selector(animationBackToOrigin) withObject:nil afterDelay:0.7f];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
 }
 
 - (BOOL)prefersStatusBarHidden {
@@ -72,7 +76,7 @@ UITableViewDataSource
 }
 
 - (void)animationBackToOrigin {
-    if (self.isBackward && self.currentSelectIndexPath) {
+    if (self.backward && self.currentSelectIndexPath) {
         if (!self.tableView.editing) {
             [self.tableView beginUpdates];
             NSIndexPath *indexPath = self.currentSelectIndexPath;
@@ -81,14 +85,10 @@ UITableViewDataSource
                                   delay:0.0f
                                 options:UIViewAnimationOptionCurveEaseInOut
                              animations:^{
-                                 cell.iconImage.transform = CGAffineTransformMakeScale(1.0f, 1.0f);
-                                 CGRect iconImageRect = cell.iconImage.frame;
-                                 UILabel *label = cell.titleLabel;
-                                 CGRect labelRect = CGRectMake(label.frame.origin.x,
-                                                               iconImageRect.origin.y + iconImageRect.size.height + 10 + self.view.frame.size.height,
-                                                               label.frame.size.width,
-                                                               label.frame.size.height);
-                                 [cell.titleLabel setFrame:labelRect];
+                                 self.navigationController.navigationBar.transform = CGAffineTransformMakeTranslation(0.0f, 0.0f);
+                                 self.tabBarController.tabBar.transform = CGAffineTransformMakeTranslation(0.0f, 0.0f);
+                                 cell.backgroundColor = self.currentColor;
+                                 cell.alpha = 1.0f;
                              } completion:^(BOOL finished) {
                                  [self animationCompleted];
                              }];
@@ -96,15 +96,14 @@ UITableViewDataSource
             [self.tableView scrollToRowAtIndexPath:indexPath
                                   atScrollPosition:UITableViewScrollPositionMiddle
                                           animated:YES];
-            
         }
     }
 }
 
 - (void)animationCompleted {
-    self.isBackward = NO;
+    self.currentColor = nil;
+    self.backward = NO;
     self.currentSelection = -1;
-    self.textLabel = nil;
     self.tableView.scrollEnabled = YES;
     self.tableView.allowsSelection = YES;
 }
@@ -115,40 +114,31 @@ UITableViewDataSource
         self.currentSelectIndexPath = indexPath;
         self.currentSelection = indexPath.row;
         MTUETableViewCell *cell = (MTUETableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
-        
-        [UIView animateWithDuration:0.5f
+
+        [UIView animateWithDuration:0.3f
                               delay:0.0f
                             options:UIViewAnimationOptionCurveEaseInOut
                          animations:^{
-                             cell.iconImage.transform = CGAffineTransformMakeScale(2.0, 2.0);
+                             self.navigationController.navigationBar.transform = CGAffineTransformMakeTranslation(0.0f,
+                                                                                    -self.navigationController.navigationBar.bounds.size.height);
+                             self.tabBarController.tabBar.transform = CGAffineTransformMakeTranslation(0.0f, self.tabBarController.tabBar.bounds.size.height);
+                             self.currentColor = cell.backgroundColor;
+                             [self transitionBetWeenViewController];
                          } completion:^(BOOL finished) {
-                             CGRect iconImageRect = cell.iconImage.frame;
-                             cell.titleLabel.text = self.namesArray[indexPath.row];
-                             [UIView animateWithDuration:0.4f animations:^{
-                                 UILabel *label = cell.titleLabel;
-                                 CGRect labelRect = CGRectMake(label.frame.origin.x,
-                                                               iconImageRect.origin.y + iconImageRect.size.height + 10,
-                                                               label.frame.size.width,
-                                                               label.frame.size.width);
-                                 [cell.titleLabel setFrame:labelRect];
-                             } completion:^(BOOL finished) {
-                                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                                     [self transitionBetWeenViewControllers];
-                                 });
-                                 self.isBackward = YES;
-                                 tableView.scrollEnabled = NO;
-                                 tableView.allowsSelection = NO;
-                             }];
+                             self.backward = YES;
+                             tableView.scrollEnabled = NO;
+                             tableView.allowsSelection = NO;
                          }];
         [tableView endUpdates];
         [tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
     }
 }
 
-- (void)transitionBetWeenViewControllers {
-    UIViewController *detailViewController = [[UIViewController alloc] init];
-    detailViewController.view.backgroundColor = [UIColor whiteColor];
-    [self.navigationController pushViewController:detailViewController animated:NO];
+- (void)transitionBetWeenViewController {
+    MTUEDetailViewController *detailViewController = [[MTUEDetailViewController alloc] init];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:detailViewController];
+    navigationController.transitioningDelegate = self;
+    [self presentViewController:navigationController animated:YES completion:nil];
 }
 
 #pragma mark - UITableViewDataSource
@@ -159,13 +149,13 @@ UITableViewDataSource
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"MTUETableViewCell" owner:self options:nil];
     MTUETableViewCell *cell = [topLevelObjects objectAtIndex:0];
-    cell.backgroundColor = self.colorsArray[indexPath.row];
+    cell.customBackgroundView.backgroundColor = self.colorsArray[indexPath.row];
     cell.iconImage.image = [UIImage imageNamed:[self.imageNameArray objectAtIndex:indexPath.row]];
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (!self.backWard) {
+    if (!self.backward) {
         if (indexPath.row == self.currentSelection) {
             return self.view.bounds.size.height;
         } else {
@@ -182,7 +172,20 @@ UITableViewDataSource
     [tableView performSelectorOnMainThread:@selector(deselectRowAtIndexPath:animated:)
                                 withObject:indexPath
                              waitUntilDone:NO];
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+
     [self animatingTransitionForTableView:tableView rowAtIndexPath:indexPath];
+}
+
+#pragma mark - UIViewControllerTransitioningDelegate
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented
+                                                                  presentingController:(UIViewController *)presenting
+                                                                      sourceController:(UIViewController *)source {
+    return [[MTUEPresentTransitionAnimated alloc] init];
+}
+
+- (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
+    return [[MTUEDismissTransitionAnimated alloc] init];
 }
 
 @end

@@ -14,10 +14,7 @@
 		E44EB72D1D6C45F900414F2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E44EB72B1D6C45F900414F2F /* LaunchScreen.storyboard */; };
 		E44EB7381D6C45FA00414F2F /* MTUserExperienceDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E44EB7371D6C45FA00414F2F /* MTUserExperienceDemoTests.m */; };
 		E44EB7431D6C45FA00414F2F /* MTUserExperienceDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E44EB7421D6C45FA00414F2F /* MTUserExperienceDemoUITests.m */; };
-		E44EB7521D6C4EDB00414F2F /* MTUETabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E44EB7511D6C4EDB00414F2F /* MTUETabBarController.m */; };
-		E44EB7551D6D319300414F2F /* MTUEHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E44EB7541D6D319300414F2F /* MTUEHomeViewController.m */; };
 		E44EB7631D6D8F3800414F2F /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = E44EB7571D6D8F3800414F2F /* bg.png */; };
-		E44EB7641D6D8F3800414F2F /* hc-drib3.png in Resources */ = {isa = PBXBuildFile; fileRef = E44EB7581D6D8F3800414F2F /* hc-drib3.png */; };
 		E44EB7651D6D8F3800414F2F /* ios7-cloudy.png in Resources */ = {isa = PBXBuildFile; fileRef = E44EB7591D6D8F3800414F2F /* ios7-cloudy.png */; };
 		E44EB7661D6D8F3800414F2F /* load-a.png in Resources */ = {isa = PBXBuildFile; fileRef = E44EB75A1D6D8F3800414F2F /* load-a.png */; };
 		E44EB7671D6D8F3800414F2F /* social-dribbble-outline.png in Resources */ = {isa = PBXBuildFile; fileRef = E44EB75B1D6D8F3800414F2F /* social-dribbble-outline.png */; };
@@ -25,9 +22,20 @@
 		E44EB7691D6D8F3800414F2F /* social-github.png in Resources */ = {isa = PBXBuildFile; fileRef = E44EB75D1D6D8F3800414F2F /* social-github.png */; };
 		E44EB76A1D6D8F3800414F2F /* social-instagram.png in Resources */ = {isa = PBXBuildFile; fileRef = E44EB75E1D6D8F3800414F2F /* social-instagram.png */; };
 		E44EB76B1D6D8F3800414F2F /* up_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = E44EB75F1D6D8F3800414F2F /* up_arrow.png */; };
-		E44EB76F1D6D8FB800414F2F /* UIColor+MTUserExperience.m in Sources */ = {isa = PBXBuildFile; fileRef = E44EB76E1D6D8FB800414F2F /* UIColor+MTUserExperience.m */; };
-		E44EB7721D6D919900414F2F /* MTUETableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E44EB7711D6D919900414F2F /* MTUETableViewCell.m */; };
-		E44EB7741D6D9A1D00414F2F /* MTUETableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E44EB7731D6D9A1D00414F2F /* MTUETableViewCell.xib */; };
+		E44EB7881D6DA8D900414F2F /* MTUETabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E44EB77E1D6DA8D800414F2F /* MTUETabBarController.m */; };
+		E44EB7891D6DA8D900414F2F /* UIColor+MTUserExperience.m in Sources */ = {isa = PBXBuildFile; fileRef = E44EB7811D6DA8D900414F2F /* UIColor+MTUserExperience.m */; };
+		E44EB78A1D6DA8D900414F2F /* MTUETableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E44EB7841D6DA8D900414F2F /* MTUETableViewCell.m */; };
+		E44EB78B1D6DA8D900414F2F /* MTUETableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E44EB7851D6DA8D900414F2F /* MTUETableViewCell.xib */; };
+		E44EB78E1D6DA94200414F2F /* MTUEDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E44EB78D1D6DA94200414F2F /* MTUEDetailViewController.m */; };
+		E44EB7901D6DA97800414F2F /* MTUEHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E44EB78F1D6DA97800414F2F /* MTUEHomeViewController.m */; };
+		E44EB7941D6DAFF700414F2F /* hc-drib3.png in Resources */ = {isa = PBXBuildFile; fileRef = E44EB7931D6DAFF700414F2F /* hc-drib3.png */; };
+		E44EB7971D6DB07000414F2F /* MTUEDetailBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = E44EB7961D6DB07000414F2F /* MTUEDetailBottomView.m */; };
+		E44EB7991D6DB09400414F2F /* MTUEDetailBottom.xib in Resources */ = {isa = PBXBuildFile; fileRef = E44EB7981D6DB09400414F2F /* MTUEDetailBottom.xib */; };
+		E44EB79F1D6EA08500414F2F /* MTUECommentTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E44EB79E1D6EA08500414F2F /* MTUECommentTableViewController.m */; };
+		E44EB7A31D6EBE7B00414F2F /* nav_close_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E44EB7A21D6EBE7B00414F2F /* nav_close_icon@3x.png */; };
+		E44EB7A71D6EC15F00414F2F /* IMG_2624.png in Resources */ = {isa = PBXBuildFile; fileRef = E44EB7A61D6EC15F00414F2F /* IMG_2624.png */; };
+		E44EB7B21D6ED8FE00414F2F /* MTUEDismissTransitionAnimated.m in Sources */ = {isa = PBXBuildFile; fileRef = E44EB7B11D6ED8FE00414F2F /* MTUEDismissTransitionAnimated.m */; };
+		E44EB7B51D6ED91000414F2F /* MTUEPresentTransitionAnimated.m in Sources */ = {isa = PBXBuildFile; fileRef = E44EB7B41D6ED91000414F2F /* MTUEPresentTransitionAnimated.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,12 +70,7 @@
 		E44EB73E1D6C45FA00414F2F /* MTUserExperienceDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MTUserExperienceDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E44EB7421D6C45FA00414F2F /* MTUserExperienceDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTUserExperienceDemoUITests.m; sourceTree = "<group>"; };
 		E44EB7441D6C45FA00414F2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E44EB7501D6C4EDB00414F2F /* MTUETabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTUETabBarController.h; sourceTree = "<group>"; };
-		E44EB7511D6C4EDB00414F2F /* MTUETabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTUETabBarController.m; sourceTree = "<group>"; };
-		E44EB7531D6D319300414F2F /* MTUEHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTUEHomeViewController.h; sourceTree = "<group>"; };
-		E44EB7541D6D319300414F2F /* MTUEHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTUEHomeViewController.m; sourceTree = "<group>"; };
 		E44EB7571D6D8F3800414F2F /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
-		E44EB7581D6D8F3800414F2F /* hc-drib3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hc-drib3.png"; sourceTree = "<group>"; };
 		E44EB7591D6D8F3800414F2F /* ios7-cloudy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ios7-cloudy.png"; sourceTree = "<group>"; };
 		E44EB75A1D6D8F3800414F2F /* load-a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "load-a.png"; sourceTree = "<group>"; };
 		E44EB75B1D6D8F3800414F2F /* social-dribbble-outline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "social-dribbble-outline.png"; sourceTree = "<group>"; };
@@ -75,11 +78,29 @@
 		E44EB75D1D6D8F3800414F2F /* social-github.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "social-github.png"; sourceTree = "<group>"; };
 		E44EB75E1D6D8F3800414F2F /* social-instagram.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "social-instagram.png"; sourceTree = "<group>"; };
 		E44EB75F1D6D8F3800414F2F /* up_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = up_arrow.png; sourceTree = "<group>"; };
-		E44EB76D1D6D8FB800414F2F /* UIColor+MTUserExperience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+MTUserExperience.h"; sourceTree = "<group>"; };
-		E44EB76E1D6D8FB800414F2F /* UIColor+MTUserExperience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MTUserExperience.m"; sourceTree = "<group>"; };
-		E44EB7701D6D919900414F2F /* MTUETableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTUETableViewCell.h; sourceTree = "<group>"; };
-		E44EB7711D6D919900414F2F /* MTUETableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTUETableViewCell.m; sourceTree = "<group>"; };
-		E44EB7731D6D9A1D00414F2F /* MTUETableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MTUETableViewCell.xib; sourceTree = "<group>"; };
+		E44EB77B1D6DA8D800414F2F /* MTUEHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTUEHomeViewController.h; sourceTree = "<group>"; };
+		E44EB77D1D6DA8D800414F2F /* MTUETabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTUETabBarController.h; sourceTree = "<group>"; };
+		E44EB77E1D6DA8D800414F2F /* MTUETabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTUETabBarController.m; sourceTree = "<group>"; };
+		E44EB7801D6DA8D800414F2F /* UIColor+MTUserExperience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+MTUserExperience.h"; sourceTree = "<group>"; };
+		E44EB7811D6DA8D900414F2F /* UIColor+MTUserExperience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MTUserExperience.m"; sourceTree = "<group>"; };
+		E44EB7831D6DA8D900414F2F /* MTUETableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTUETableViewCell.h; sourceTree = "<group>"; };
+		E44EB7841D6DA8D900414F2F /* MTUETableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTUETableViewCell.m; sourceTree = "<group>"; };
+		E44EB7851D6DA8D900414F2F /* MTUETableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MTUETableViewCell.xib; sourceTree = "<group>"; };
+		E44EB78C1D6DA94200414F2F /* MTUEDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTUEDetailViewController.h; sourceTree = "<group>"; };
+		E44EB78D1D6DA94200414F2F /* MTUEDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTUEDetailViewController.m; sourceTree = "<group>"; };
+		E44EB78F1D6DA97800414F2F /* MTUEHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTUEHomeViewController.m; sourceTree = "<group>"; };
+		E44EB7931D6DAFF700414F2F /* hc-drib3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hc-drib3.png"; sourceTree = "<group>"; };
+		E44EB7951D6DB07000414F2F /* MTUEDetailBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTUEDetailBottomView.h; sourceTree = "<group>"; };
+		E44EB7961D6DB07000414F2F /* MTUEDetailBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTUEDetailBottomView.m; sourceTree = "<group>"; };
+		E44EB7981D6DB09400414F2F /* MTUEDetailBottom.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MTUEDetailBottom.xib; sourceTree = "<group>"; };
+		E44EB79D1D6EA08500414F2F /* MTUECommentTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTUECommentTableViewController.h; sourceTree = "<group>"; };
+		E44EB79E1D6EA08500414F2F /* MTUECommentTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTUECommentTableViewController.m; sourceTree = "<group>"; };
+		E44EB7A21D6EBE7B00414F2F /* nav_close_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_close_icon@3x.png"; sourceTree = "<group>"; };
+		E44EB7A61D6EC15F00414F2F /* IMG_2624.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_2624.png; sourceTree = "<group>"; };
+		E44EB7B01D6ED8FE00414F2F /* MTUEDismissTransitionAnimated.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTUEDismissTransitionAnimated.h; sourceTree = "<group>"; };
+		E44EB7B11D6ED8FE00414F2F /* MTUEDismissTransitionAnimated.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTUEDismissTransitionAnimated.m; sourceTree = "<group>"; };
+		E44EB7B31D6ED91000414F2F /* MTUEPresentTransitionAnimated.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTUEPresentTransitionAnimated.h; sourceTree = "<group>"; };
+		E44EB7B41D6ED91000414F2F /* MTUEPresentTransitionAnimated.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTUEPresentTransitionAnimated.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,20 +151,15 @@
 		E44EB71C1D6C45F900414F2F /* MTUserExperienceDemo */ = {
 			isa = PBXGroup;
 			children = (
+				E44EB7781D6DA8D800414F2F /* controller */,
+				E44EB77F1D6DA8D800414F2F /* utils */,
+				E44EB7A81D6ED4A200414F2F /* model */,
+				E44EB7821D6DA8D900414F2F /* view */,
 				E44EB71D1D6C45F900414F2F /* Supporting Files */,
 				E44EB7561D6D8F3800414F2F /* Logo */,
 				E44EB7201D6C45F900414F2F /* AppDelegate.h */,
 				E44EB7211D6C45F900414F2F /* AppDelegate.m */,
 				E44EB72E1D6C45F900414F2F /* Info.plist */,
-				E44EB7501D6C4EDB00414F2F /* MTUETabBarController.h */,
-				E44EB7511D6C4EDB00414F2F /* MTUETabBarController.m */,
-				E44EB7531D6D319300414F2F /* MTUEHomeViewController.h */,
-				E44EB7541D6D319300414F2F /* MTUEHomeViewController.m */,
-				E44EB76D1D6D8FB800414F2F /* UIColor+MTUserExperience.h */,
-				E44EB76E1D6D8FB800414F2F /* UIColor+MTUserExperience.m */,
-				E44EB7701D6D919900414F2F /* MTUETableViewCell.h */,
-				E44EB7711D6D919900414F2F /* MTUETableViewCell.m */,
-				E44EB7731D6D9A1D00414F2F /* MTUETableViewCell.xib */,
 			);
 			path = MTUserExperienceDemo;
 			sourceTree = "<group>";
@@ -180,8 +196,10 @@
 		E44EB7561D6D8F3800414F2F /* Logo */ = {
 			isa = PBXGroup;
 			children = (
+				E44EB7A61D6EC15F00414F2F /* IMG_2624.png */,
+				E44EB7A21D6EBE7B00414F2F /* nav_close_icon@3x.png */,
+				E44EB7931D6DAFF700414F2F /* hc-drib3.png */,
 				E44EB7571D6D8F3800414F2F /* bg.png */,
-				E44EB7581D6D8F3800414F2F /* hc-drib3.png */,
 				E44EB7591D6D8F3800414F2F /* ios7-cloudy.png */,
 				E44EB75A1D6D8F3800414F2F /* load-a.png */,
 				E44EB75B1D6D8F3800414F2F /* social-dribbble-outline.png */,
@@ -191,6 +209,62 @@
 				E44EB75F1D6D8F3800414F2F /* up_arrow.png */,
 			);
 			path = Logo;
+			sourceTree = "<group>";
+		};
+		E44EB7781D6DA8D800414F2F /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				E44EB77D1D6DA8D800414F2F /* MTUETabBarController.h */,
+				E44EB77E1D6DA8D800414F2F /* MTUETabBarController.m */,
+				E44EB77B1D6DA8D800414F2F /* MTUEHomeViewController.h */,
+				E44EB78F1D6DA97800414F2F /* MTUEHomeViewController.m */,
+				E44EB78C1D6DA94200414F2F /* MTUEDetailViewController.h */,
+				E44EB78D1D6DA94200414F2F /* MTUEDetailViewController.m */,
+				E44EB79D1D6EA08500414F2F /* MTUECommentTableViewController.h */,
+				E44EB79E1D6EA08500414F2F /* MTUECommentTableViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		E44EB77F1D6DA8D800414F2F /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				E44EB7801D6DA8D800414F2F /* UIColor+MTUserExperience.h */,
+				E44EB7811D6DA8D900414F2F /* UIColor+MTUserExperience.m */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		E44EB7821D6DA8D900414F2F /* view */ = {
+			isa = PBXGroup;
+			children = (
+				E44EB7831D6DA8D900414F2F /* MTUETableViewCell.h */,
+				E44EB7841D6DA8D900414F2F /* MTUETableViewCell.m */,
+				E44EB7851D6DA8D900414F2F /* MTUETableViewCell.xib */,
+				E44EB7951D6DB07000414F2F /* MTUEDetailBottomView.h */,
+				E44EB7961D6DB07000414F2F /* MTUEDetailBottomView.m */,
+				E44EB7981D6DB09400414F2F /* MTUEDetailBottom.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		E44EB7A81D6ED4A200414F2F /* model */ = {
+			isa = PBXGroup;
+			children = (
+				E44EB7A91D6ED4B700414F2F /* Animator */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		E44EB7A91D6ED4B700414F2F /* Animator */ = {
+			isa = PBXGroup;
+			children = (
+				E44EB7B01D6ED8FE00414F2F /* MTUEDismissTransitionAnimated.h */,
+				E44EB7B11D6ED8FE00414F2F /* MTUEDismissTransitionAnimated.m */,
+				E44EB7B31D6ED91000414F2F /* MTUEPresentTransitionAnimated.h */,
+				E44EB7B41D6ED91000414F2F /* MTUEPresentTransitionAnimated.m */,
+			);
+			path = Animator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,15 +375,18 @@
 			files = (
 				E44EB72D1D6C45F900414F2F /* LaunchScreen.storyboard in Resources */,
 				E44EB7691D6D8F3800414F2F /* social-github.png in Resources */,
-				E44EB7741D6D9A1D00414F2F /* MTUETableViewCell.xib in Resources */,
+				E44EB78B1D6DA8D900414F2F /* MTUETableViewCell.xib in Resources */,
 				E44EB7671D6D8F3800414F2F /* social-dribbble-outline.png in Resources */,
 				E44EB72A1D6C45F900414F2F /* Assets.xcassets in Resources */,
+				E44EB7A31D6EBE7B00414F2F /* nav_close_icon@3x.png in Resources */,
+				E44EB7991D6DB09400414F2F /* MTUEDetailBottom.xib in Resources */,
 				E44EB7631D6D8F3800414F2F /* bg.png in Resources */,
+				E44EB7A71D6EC15F00414F2F /* IMG_2624.png in Resources */,
 				E44EB7281D6C45F900414F2F /* Main.storyboard in Resources */,
 				E44EB76B1D6D8F3800414F2F /* up_arrow.png in Resources */,
 				E44EB76A1D6D8F3800414F2F /* social-instagram.png in Resources */,
 				E44EB7661D6D8F3800414F2F /* load-a.png in Resources */,
-				E44EB7641D6D8F3800414F2F /* hc-drib3.png in Resources */,
+				E44EB7941D6DAFF700414F2F /* hc-drib3.png in Resources */,
 				E44EB7651D6D8F3800414F2F /* ios7-cloudy.png in Resources */,
 				E44EB7681D6D8F3800414F2F /* social-dropbox.png in Resources */,
 			);
@@ -336,12 +413,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E44EB7521D6C4EDB00414F2F /* MTUETabBarController.m in Sources */,
-				E44EB76F1D6D8FB800414F2F /* UIColor+MTUserExperience.m in Sources */,
-				E44EB7721D6D919900414F2F /* MTUETableViewCell.m in Sources */,
+				E44EB79F1D6EA08500414F2F /* MTUECommentTableViewController.m in Sources */,
+				E44EB7B51D6ED91000414F2F /* MTUEPresentTransitionAnimated.m in Sources */,
 				E44EB7221D6C45F900414F2F /* AppDelegate.m in Sources */,
-				E44EB7551D6D319300414F2F /* MTUEHomeViewController.m in Sources */,
+				E44EB7891D6DA8D900414F2F /* UIColor+MTUserExperience.m in Sources */,
 				E44EB71F1D6C45F900414F2F /* main.m in Sources */,
+				E44EB78A1D6DA8D900414F2F /* MTUETableViewCell.m in Sources */,
+				E44EB78E1D6DA94200414F2F /* MTUEDetailViewController.m in Sources */,
+				E44EB7901D6DA97800414F2F /* MTUEHomeViewController.m in Sources */,
+				E44EB7881D6DA8D900414F2F /* MTUETabBarController.m in Sources */,
+				E44EB7971D6DB07000414F2F /* MTUEDetailBottomView.m in Sources */,
+				E44EB7B21D6ED8FE00414F2F /* MTUEDismissTransitionAnimated.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
