@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WZAnimatingTransitionCell" rowHeight="224" id="bK4-zR-2BF" userLabel="MTUETableViewCell" customClass="HZTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="416" height="160"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bK4-zR-2BF" id="O8B-Xq-9Uj">
+                <rect key="frame" x="0.0" y="0.0" width="416" height="159.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VyK-n8-WwN">
+                        <rect key="frame" x="0.0" y="0.0" width="416" height="160"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DKB-df-NWc">
+                                <rect key="frame" x="191" y="63" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="bTb-k3-7cX"/>
+                                    <constraint firstAttribute="height" constant="35" id="f9Z-nO-6D7"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="DKB-df-NWc" firstAttribute="centerX" secondItem="VyK-n8-WwN" secondAttribute="centerX" id="1ag-7L-ChB"/>
+                            <constraint firstItem="DKB-df-NWc" firstAttribute="centerY" secondItem="VyK-n8-WwN" secondAttribute="centerY" id="IAE-Co-5mC"/>
+                            <constraint firstAttribute="height" constant="160" id="g4i-IT-F3F"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="VyK-n8-WwN" secondAttribute="trailing" constant="-8" id="4vV-o0-nF6"/>
+                    <constraint firstItem="VyK-n8-WwN" firstAttribute="centerY" secondItem="O8B-Xq-9Uj" secondAttribute="centerY" id="As1-Fw-k4N"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="VyK-n8-WwN" secondAttribute="trailing" constant="-8" id="FER-Kp-tt8"/>
+                    <constraint firstItem="VyK-n8-WwN" firstAttribute="leading" secondItem="O8B-Xq-9Uj" secondAttribute="leadingMargin" constant="-8" id="avU-Pj-QUY"/>
+                    <constraint firstItem="VyK-n8-WwN" firstAttribute="centerX" secondItem="O8B-Xq-9Uj" secondAttribute="centerX" id="xiK-Ne-8lU"/>
+                    <constraint firstItem="VyK-n8-WwN" firstAttribute="leading" secondItem="O8B-Xq-9Uj" secondAttribute="leadingMargin" constant="-8" id="zYd-R9-Xsi"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="FER-Kp-tt8"/>
+                        <exclude reference="zYd-R9-Xsi"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="customBackgroundView" destination="VyK-n8-WwN" id="k55-lR-fmQ"/>
+                <outlet property="iconImage" destination="DKB-df-NWc" id="PD9-2D-aVw"/>
+            </connections>
+            <point key="canvasLocation" x="338" y="184"/>
+        </tableViewCell>
+    </objects>
+</document>

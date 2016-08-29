@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="5MU-f9-re9" customClass="HZDetailBottomView">
+            <rect key="frame" x="0.0" y="0.0" width="526" height="83"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 of 12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BaF-8T-gnS">
+                    <rect key="frame" x="213" y="32" width="100" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="5yq-bI-lCy"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="6cE-Qh-Ueh"/>
+                        <constraint firstAttribute="width" constant="100" id="Hco-3V-vcy"/>
+                        <constraint firstAttribute="height" constant="20" id="bXT-bk-1F9"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v6G-r7-OW9">
+                    <rect key="frame" x="20" y="16" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="UZI-Nj-BnB"/>
+                        <constraint firstAttribute="height" constant="50" id="dxD-CU-EI4"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" title="CLOSE">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsy-Ka-yxb">
+                    <rect key="frame" x="426" y="17" width="80" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="Wzl-9E-LJ3"/>
+                        <constraint firstAttribute="height" constant="50" id="fdF-HQ-g8p"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                    <state key="normal" title="COMMENT">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="bsy-Ka-yxb" firstAttribute="centerY" secondItem="5MU-f9-re9" secondAttribute="centerY" id="KK0-n0-RRD"/>
+                <constraint firstItem="BaF-8T-gnS" firstAttribute="centerY" secondItem="5MU-f9-re9" secondAttribute="centerY" id="Yzs-uX-8an"/>
+                <constraint firstItem="BaF-8T-gnS" firstAttribute="centerX" secondItem="5MU-f9-re9" secondAttribute="centerX" id="Z1X-Cl-t21"/>
+                <constraint firstItem="v6G-r7-OW9" firstAttribute="centerY" secondItem="5MU-f9-re9" secondAttribute="centerY" id="ZHa-sF-kga"/>
+                <constraint firstItem="v6G-r7-OW9" firstAttribute="leading" secondItem="5MU-f9-re9" secondAttribute="leading" constant="20" id="jSs-yo-0ae"/>
+                <constraint firstAttribute="trailing" secondItem="bsy-Ka-yxb" secondAttribute="trailing" constant="20" id="yaq-Ph-PAy"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="closeButton" destination="v6G-r7-OW9" id="4eP-zf-D8y"/>
+                <outlet property="commentButton" destination="bsy-Ka-yxb" id="GmZ-dV-NpN"/>
+                <outlet property="pageLabel" destination="BaF-8T-gnS" id="wgF-qX-8pw"/>
+            </connections>
+            <point key="canvasLocation" x="689" y="334.5"/>
+        </view>
+    </objects>
+</document>
