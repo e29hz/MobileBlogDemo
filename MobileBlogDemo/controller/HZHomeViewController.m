@@ -144,6 +144,7 @@ UIViewControllerTransitioningDelegate
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"HZTableViewCell" owner:self options:nil];
     HZTableViewCell *cell = [topLevelObjects objectAtIndex:0];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.customBackgroundView.backgroundColor = self.colorsArray[indexPath.row];
     cell.iconImage.image = [UIImage imageNamed:[self.imageNameArray objectAtIndex:indexPath.row]];
     return cell;
