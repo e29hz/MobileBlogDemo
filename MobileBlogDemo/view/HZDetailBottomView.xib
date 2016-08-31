@@ -23,10 +23,10 @@
                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v6G-r7-OW9">
-                    <rect key="frame" x="20" y="16" width="50" height="50"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v6G-r7-OW9">
+                    <rect key="frame" x="20" y="16" width="100" height="50"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="50" id="UZI-Nj-BnB"/>
+                        <constraint firstAttribute="width" constant="100" id="UZI-Nj-BnB"/>
                         <constraint firstAttribute="height" constant="50" id="dxD-CU-EI4"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -34,10 +34,10 @@
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsy-Ka-yxb">
-                    <rect key="frame" x="426" y="17" width="80" height="50"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsy-Ka-yxb">
+                    <rect key="frame" x="406" y="17" width="100" height="50"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="80" id="Wzl-9E-LJ3"/>
+                        <constraint firstAttribute="width" constant="100" id="Wzl-9E-LJ3"/>
                         <constraint firstAttribute="height" constant="50" id="fdF-HQ-g8p"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
